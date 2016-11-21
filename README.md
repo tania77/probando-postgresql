@@ -1,9 +1,8 @@
-#Práctica: GitHub API
+#Práctica: LocalStrategy y base de datos
 
 ## Descripción
 
-El objetivo es facilitar el uso del repositorio a todo tipo de usuarios, ya estén familizarizados con gitbook y github o no. Para ello haremos
-uso de la API de GitHub para poder crearle un repo en la plataforma.
+El servidor proveído por el plugin (sea iaaso heroku) deberá autenticar al lector del libro usando LocalStrategy y una base de datos en la que se guarda la información acerca de los usuarios.
 
 
 
