@@ -126,8 +126,8 @@ elegido en el package.json.
 ## Enlaces interesantes 
  
 * [NPM](https://www.npmjs.com/package/gitbook-start-elt)
-* [Repositorio de la práctica](https://github.com/ULL-ESIT-SYTW-1617/crear-repositorio-en-github-ericlucastania-1.git)
-* [Descripción de la tarea campus](https://casianorodriguezleon.gitbooks.io/ull-esit-1617/content/practicas/practicagithubapi.html)
+* [Repositorio de la práctica](https://github.com/ULL-ESIT-SYTW-1617/practica-localstrategy-y-base-de-datos-ericlucastania)
+* [Descripción de la tarea campus](https://crguezl.github.io/ull-esit-1617/practicas/practicapassportlocalsequelize.html)
 * [PLUGIN HEROKU](https://github.com/ULL-ESIT-SYTW-1617/gitbook-start-heroku-ericlucastania.git)
 * [NPM PLUGIN HEROKU](https://www.npmjs.com/package/gitbook-start-plugin-heroku-ericlucastania)
 * [PLUGIN IAAS](https://github.com/ULL-ESIT-SYTW-1617/gitbook-start-heroku-ericlucastania.git)
