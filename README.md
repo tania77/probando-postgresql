@@ -81,7 +81,7 @@ La siguiente función es la que se utiliza para guardar el token que se obtiene
 
 
 
-## Correción 
+## Corrección 
 
 En el archivo /bin/octonode.js utilizamos la función ghme.info para obtener el email y nombre del usuario
 y guardarlo en el pck.json
