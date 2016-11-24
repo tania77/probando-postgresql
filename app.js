@@ -38,15 +38,16 @@ function buscarNombre(usuario, password, cb) {
             res(cb(null));
           }
           else {
-            if (rows.username == usuario && bcrypt.compareSync(password, rows.pass)) {
+            if ((rows.username == usuario) && (bcrypt.compareSync(password, rows.pass))) {
               boolLocal = true;
               res(cb(null, rows));
             }
           }
-          if (!boolLocal) {
-            res(cb(null));
-          }
+          
         });
+        if (!boolLocal) {
+            cb(null);
+          }
       });
 }
 
@@ -162,6 +163,7 @@ app.get('/registro', function (req, res) {
 app.get('/login', function (req, res) {
 
   if (req.user) {
+      
     app.get('/profile', function (req, res) {
       res.render('home');
     });
