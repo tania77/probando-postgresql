@@ -2,7 +2,11 @@
 
 ## Descripción
 
-El servidor proveído por el plugin (sea iaaso heroku) deberá autenticar al lector del libro usando LocalStrategy y una base de datos en la que se guarda la información acerca de los usuarios.
+El servidor proveído por el plugin (sea iaaso heroku) deberá autenticar al lector del libro usando LocalStrategy 
+y una base de datos en la que se guarda la información acerca de los usuarios.
+En este caso la base de datos utilizada es SQLITE,que es una biblioteca escrita en leguaje C que implementa 
+un Sistema de gestión de bases de datos transaccionales SQL auto-contenido, sin servidor y sin configuración. El código de 
+SQLite es de dominio público y libre para cualquier uso, ya sea comercial o privado.
 
 
 
@@ -74,10 +78,63 @@ La siguiente función es la que se utiliza para guardar el token que se obtiene
 
 ```gitbook-start -d PLUGIN``` !! También puedes usar la opción --deploy
 
+* Te pedirá un token, puedes generarlo ejecutando ```heroku auth:token``` o bien usar uno ya generado.
+* Se te solicitará el nombre que tendrá tu aplicación en Heroku.
+* Te preguntará si deseas pedir autentificación para que sólo los usuarios de tu organización puedan leer el libro.
+    * Tienes diferentes opciones:
+        * Si quieres que solo los usuarios de la organización puedan acceder al libro 
+          tendras que poner la opción 's' o 'S' o simplemente darle a enter
+        * Si quieres que cualquiera pueda acceder al libro,tendrás que poner la opción 
+          'n' o 'N'
 
-**3. Ejecuta el gulp creado**
+**3. Generando aplicación**
 
-```gulp deploy-plugin```
+
+* Cambiar en el archivo datos.json los datos de las Oauth Aplications que aparece por los tuyos
+Crea una Outh Aplications en [github](https://github.com/settings/developers)
+
+
+![](https://1.bp.blogspot.com/-l3uBl8431vo/WDMCXGpKJZI/AAAAAAAAAA4/FlJIQMQNj9wF7eg0hdYh5i0P_UszFIVQACLcB/s1600/Captura%2Bde%2Bpantalla%2Bde%2B2016-11-21%2B14%253A13%253A11.PNG)
+
+* En la parte superior aparece en boton registrar aplicación
+
+
+
+![](https://4.bp.blogspot.com/-e4-KkIrqeWQ/WDMCXWfAStI/AAAAAAAAAA0/NeUq3iL5Ap8ee8rrN8innO7MRqMEUROvgCLcB/s1600/Captura%2Bde%2Bpantalla%2Bde%2B2016-11-21%2B14%253A13%253A38.PNg)
+
+* Te aparecerá lo siguiente
+
+
+
+![](https://1.bp.blogspot.com/-c9gMk1SAt0U/WDMCXgTEYUI/AAAAAAAAABA/RSnAEhPdYkkpqNHwuATB-AEnvLPt5EURgCLcB/s1600/Captura%2Bde%2Bpantalla%2Bde%2B2016-11-21%2B14%253A13%253A50.PNG)
+
+* A continuación se muestra un ejemplo de que datos poner en la aplicación,en este caso está horientada a 
+utilizar heroku
+
+
+
+![](https://1.bp.blogspot.com/-gCNY7ygJ6ho/WDMCXkAN_II/AAAAAAAAAA8/J_qmtz5d9H8At_y_Zna235Vx8xDGluNSQCLcB/s1600/Captura%2Bde%2Bpantalla%2Bde%2B2016-11-21%2B14%253A16%253A12.PNg)
+
+* Una vez creada te aparecerán los datos correspondientes a la aplicación de desarrollo
+
+
+![](https://4.bp.blogspot.com/-a_3vEmXyy3k/WDMEMOrUvGI/AAAAAAAAABM/PMAMRcW7uC45uLsWiH6nFQ9hJLIpG9mHQCLcB/s1600/Captura%2Bde%2Bpantalla%2Bde%2B2016-11-21%2B14%253A26%253A38.PNG)
+
+* Ahora genera un [token](https://github.com/settings/tokens) en Github
+
+
+
+![](https://3.bp.blogspot.com/-g2l7yvBSuAw/WDMFIk1h4OI/AAAAAAAAABU/bUmkmOWrfDwdfZG3quY41ovGrHhnyInkwCLcB/s1600/Captura%2Bde%2Bpantalla%2Bde%2B2016-11-21%2B14%253A30%253A32.PNG)
+
+* Para acabar este paso sustituye esos datos en el archivo datos.json por los que vienen por defecto
+
+
+
+![](https://1.bp.blogspot.com/-RJNNaRjFT2M/WDMCXKkjZ6I/AAAAAAAAAAw/ApjKtMSo5UQrs3XnzC45DIwUdyFRVAckwCLcB/s1600/Captura%2Bde%2Bpantalla%2Bde%2B2016-11-21%2B14%253A09%253A50.PNG)
+
+**4. Ejecuta el gulp creado**
+
+```gulp deploy-heroku```
 
 
 
